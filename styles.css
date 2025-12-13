@@ -1,0 +1,58 @@
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+        background-image: url("fondo.jpg");
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+          ),
+        background-size: cover;        /* llena toda la pantalla */
+        background-position: center;   /* centra la imagen */
+        background-repeat: no-repeat;  /* no se repite */
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Helvetica, Arial, sans-serif;
+      text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+    .name {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .date {
+      margin-top: 1.5rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      opacity: 0.85;
+    }
+
+    .subtitle {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.3em;
+      opacity: 0.5;
+    }
+   
+.name,
+.date,
+.subtitle {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+  </style>
