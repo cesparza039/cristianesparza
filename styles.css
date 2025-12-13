@@ -63,7 +63,7 @@ body {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* ACCIONES */
+
 .actions {
   margin-top: 2.5rem;
   display: flex;
@@ -102,7 +102,7 @@ body {
   pointer-events: none;
 }
 
-/* FOOTER / REDES */
+
 .socials {
   padding-bottom: 2rem;
   display: flex;
@@ -111,19 +111,22 @@ body {
 }
 
 .social {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.85;
-  transition: all 0.25s ease;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .social img {
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   object-fit: contain;
+  filter: brightness(1);
 }
 
 .social:hover {
