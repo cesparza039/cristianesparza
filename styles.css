@@ -14,7 +14,7 @@ body {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.65)
     ),
-    url("images/fondo.jpg");
+    url("images/portada.jpg");
 
   background-size: cover;
   background-position: center;
@@ -65,10 +65,11 @@ body {
 
 
 .actions {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   display: flex;
-  gap: 2rem;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .action {
@@ -80,6 +81,23 @@ body {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: 0.85;
+}
+
+.action.primary {
+  font-size: 1.1rem;
+  letter-spacing: 0.25em;
+  padding: 18px 42px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 999px;
+  opacity: 1;
+}
+
+.action.primary::after {
+  display: none;
+}
+
+.action.primary:hover {
+  background: rgba(255,255,255,0.08);
 }
 
 .action::after {
@@ -98,8 +116,13 @@ body {
 }
 
 .action.disabled {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
   opacity: 0.35;
-  pointer-events: none;
+}
+
+.action.disabled::after {
+  opacity: 0.2;
 }
 
 
@@ -139,6 +162,13 @@ body {
   pointer-events: none;
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
-  .
+  .name {
+    letter-spacing: 0.1em;
+  }
+
+  .action.primary {
+    width: 80%;
+    text-align: center;
+  }
+}
