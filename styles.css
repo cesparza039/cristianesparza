@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'SF Old Republic';
+  src: url('font/SF Old Republic.ttf') format('truetype');
+}
 
 body {
   min-height: 100vh;
@@ -14,14 +18,14 @@ body {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.65)
     ),
-    url("images/portada.jpg");
+    url("images/momentos.jpg");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   color: #fff;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: SF Old Republic, Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -81,6 +85,7 @@ body {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: 0.85;
+  transition: all 0.25s ease;
 }
 
 .action.primary {
@@ -113,6 +118,7 @@ body {
 
 .action:hover {
   opacity: 1;
+  transform: translateY(-2px)
 }
 
 .action.disabled {
@@ -125,9 +131,12 @@ body {
   opacity: 0.2;
 }
 
-
 .socials {
   padding-bottom: 2rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -171,4 +180,160 @@ body {
     width: 80%;
     text-align: center;
   }
+}
+
+.tab {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.tab.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  transform: translateY(0);
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px; /* separación del borde */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 1000;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+
+  padding: 25px 40px;
+
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+}
+
+.nav-title {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 35px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.track img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.track a {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.track a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.music-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.music-video {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.music-video iframe {
+  width: 100%;
+  max-width: 5000px;
+  aspect-ratio: 16 / 9;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.music-video iframe:hover {
+  transform: scale(1.01);
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.video-grid iframe {
+  width: 320px;
+  height: 180px;
+  border-radius: 10px;
+}
+
+#music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }

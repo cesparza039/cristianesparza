@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +8,88 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
-<body>
-  <div class="content">
-    <div class="name">Cristian Esparza</div>
-    <div class="date">YA DISPONIBLE</div>
-    <div class="subtitle">Contigo Es Muy Fácil</div>
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
 
-    <div class="actions">
-      <a href="https://ffm.to/80arbae" target="_blank" class="action primary">¡Escúchala Ya!</a>
-      <a href="https://youtu.be/pMNmRXua9dE?si=qbrv4_Se5GLzu43y" target="_blank" class="action primary">¡VE EL LYRIC VIDEO DE CONTIGO ES MUY FÁCIL!</a>
+  function handleHash() {
+    const hash = window.location.hash.replace('#', '') || 'home';
+    showTab(hash);
+  }
+
+  window.addEventListener('hashchange', handleHash);
+  window.addEventListener('load', handleHash);
+</script>
+
+<body>
+  <div class="nav">
+    <div class="nav-title">Cristian Esparza</div>
+  
+    <div class="nav-links">
+      <a href="#home">Inicio</a>
+      <a href="#music">Música</a>
+      <a href="#covers">Covers</a>
+    </div>
+  </div>
+  
+  <div id="music" class="tab">
+    <div class="music-grid">
+
+      <div class="track">
+        <img src="images/CEMF.jpg">
+        <a href="https://ffm.to/80arbae" target="_blank">Escucha el primer sencillo</a>
+      </div>
+
+      <div class="track">
+        <img src="images/NewCrush.png">
+        <a href="https://ffm.to/nrremdz" target="_blank">Vailz</a>
+      </div>
+    </div>
+
+        <!-- VIDEO -->
+  <div class="music-video">
+    <iframe 
+      src="https://www.youtube.com/embed/pMNmRXua9dE"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+  
+    </div>
+  </div>
+  
+  <div id="covers" class="tab">
+    <div class="video-grid">
+
+      <iframe src="https://www.youtube.com/embed/KN8TClt1K4Q?si=Pn7oYp-wXxj-RjzE"
+        allowfullscreen>
+      </iframe>
+
+      <iframe src="https://www.youtube.com/embed/CtpWZh0dhZY?si=j8MQSI8vuoMORbdE"
+        allowfullscreen>
+      </iframe>
+
+      <iframe src="https://www.youtube.com/embed/L1CSchvc9t0?si=V9kFrL-SyfmZbmPr"
+        allowfullscreen>
+      </iframe>
+  
+    </div>
+  </div>
+
+  <div id="home" class="tab">
+    <div class="content">
+      <div class="name">Cristian Esparza</div>
+      <div class="date">PRE-SAVE</div>
+      <div class="subtitle">Momentos</div>
+  
+      <div class="actions">
+        <a href="https://ffm.to/mj1p9mp" target="_blank" class="action primary">Pre-Save en Spotify</a>
+        <a href="https://ffm.to/b5j2yoq" target="_blank" class="action primary">Pre-Save en Apple Music</a>
+      </div>
     </div>
   </div>
 
@@ -43,4 +116,3 @@
   </div>
 </body>
 </html>
-
