@@ -171,17 +171,6 @@ body {
   pointer-events: none;
 }
 
-@media (max-width: 600px) {
-  .name {
-    letter-spacing: 0.1em;
-  }
-
-  .action.primary {
-    width: 80%;
-    text-align: center;
-  }
-}
-
 .tab {
   opacity: 0;
   pointer-events: none;
@@ -336,4 +325,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+@media (max-width: 600px) {
+
+  .nav {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .nav-links {
+    position: static !important;
+    transform: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
 }
