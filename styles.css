@@ -116,17 +116,18 @@ body {
   opacity: 0.5;
 }
 
+.action.primary.disabled
+{
+  pointer-events: none;
+}
+
 .action:hover {
   opacity: 1;
   transform: translateY(-2px)
 }
 
-.action.primary.disabled {
-   pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
-  ]
 .action.disabled {
+  pointer-events: none;
   font-size: 0.65rem;
   letter-spacing: 0.3em;
   opacity: 0.35;
@@ -174,6 +175,17 @@ body {
 .social.disabled {
   opacity: 0.3;
   pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .name {
+    letter-spacing: 0.1em;
+  }
+
+  .action.primary {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 .tab {
@@ -335,16 +347,31 @@ body {
 @media (max-width: 600px) {
 
   .nav {
-    flex-direction: column !important;
-    align-items: center !important;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 10px;
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-align: center;
   }
 
   .nav-links {
-    position: static !important;
-    transform: none !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+    position: static;
+    transform: none;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 🔥 clave */
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
   }
 
 }
