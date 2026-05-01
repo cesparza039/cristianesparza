@@ -88,7 +88,20 @@
   
       <div class="actions">
         <a href="https://ffm.to/mj1p9mp" target="_blank" class="action primary">Escúchala Aquí</a>
-        <a href="https://ffm.to/b5j2yoq" target="_blank" class="action primary disabled">Video Oficial</a>
+        <a href="https://ffm.to/b5j2yoq" target="_blank" class="action primary">Video Oficial</a>
+        <script>
+  const btn = document.getElementById("btn");
+
+  function disableLink() {
+    btn.classList.add("disabled");
+    btn.removeAttribute("href");
+  }
+
+  function enableLink() {
+    btn.classList.remove("disabled");
+    btn.setAttribute("href", "https://ffm.to/b5j2yoq");
+  }
+</script>
       </div>
     </div>
   </div>
