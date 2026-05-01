@@ -121,6 +121,11 @@ body {
   transform: translateY(-2px)
 }
 
+.action.primary.disabled {
+   pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  ]
 .action.disabled {
   font-size: 0.65rem;
   letter-spacing: 0.3em;
